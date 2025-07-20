@@ -141,3 +141,34 @@ footer {
     padding: 20px;
     color: #777;
 }
+
+.scrollable-top {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px;
+  background-color: #111;
+  border-bottom: 1px solid #333;
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrollable-top::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.scroll-item {
+  display: inline-block;
+  background-color: #222;
+  color: #fff;
+  padding: 8px 16px;
+  margin: 0 8px 0 0;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background 0.3s;
+}
+
+.scroll-item:hover {
+  background-color: #444;
+  cursor: pointer;
+}
