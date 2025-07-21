@@ -13,13 +13,12 @@ body {
     line-height: 1.6;
 }
 
-/* Navbar */
-nav {
+/* Horizontally scrollable nav header */
+nav.scroll-header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     background: #4facfe;
-    padding: 15px 30px;
+    padding: 15px 0 15px 30px;
     position: fixed;
     width: 100%;
     top: 0;
@@ -27,30 +26,64 @@ nav {
     color: white;
 }
 
-nav .logo {
+nav.scroll-header .logo {
     font-size: 1.5rem;
     font-weight: bold;
+    margin-right: 16px;
+    flex-shrink: 0;
 }
 
-nav ul {
-    display: flex;
+nav.scroll-header .horizontal-scroll {
+    overflow-x: auto;
+    white-space: nowrap;
+    flex: 1 1 auto;
+    scrollbar-width: none;
+}
+
+nav.scroll-header .horizontal-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+nav.scroll-header ul {
+    display: inline-flex;
     list-style: none;
+    white-space: nowrap;
+    padding-right: 30px;
 }
 
-nav ul li {
+nav.scroll-header ul li {
     margin-left: 20px;
 }
 
-nav ul li a {
+nav.scroll-header ul li a {
     color: white;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
+    padding: 8px 16px;
+    border-radius: 999px;
+    display: inline-block;
+    font-size: 1rem;
 }
 
-nav ul li a.active,
-nav ul li a:hover {
+nav.scroll-header ul li a.active,
+nav.scroll-header ul li a:hover {
     color: #ffd700;
+    background: rgba(255,255,255,0.12);
+}
+
+@media (max-width: 700px) {
+    nav.scroll-header .logo {
+        font-size: 1.2rem;
+        margin-right: 8px;
+    }
+    nav.scroll-header ul li {
+        margin-left: 10px;
+    }
+    nav.scroll-header ul li a {
+        font-size: 0.92rem;
+        padding: 7px 12px;
+    }
 }
 
 /* Hero Section */
@@ -142,6 +175,7 @@ footer {
     color: #777;
 }
 
+/* Existing scrollable-top section */
 .scrollable-top {
   overflow-x: auto;
   white-space: nowrap;
