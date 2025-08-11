@@ -1,77 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Diwas | Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diwas Neupane | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <!-- Horizontally scrollable nav -->
-    <nav class="scroll-header">
-        <div class="logo">Diwas</div>
-        <div class="horizontal-scroll">
+    <!-- Theme Toggle -->
+    <button id="theme-toggle" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
+
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <h1 class="logo">Diwas</h1>
             <ul>
-                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <!-- Add more items to demonstrate scrolling -->
-                <li><a href="#test1">Test1</a></li>
-                <li><a href="#test2">Test2</a></li>
-                <li><a href="#test3">Test3</a></li>
-                <li><a href="#test4">Test4</a></li>
             </ul>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- Scrollable Tech Tags Section (unchanged) -->
-    <div class="scrollable-top">
-      <div class="scroll-item">Home</div>
-      <div class="scroll-item">About</div>
-      <div class="scroll-item">Projects</div>
-      <div class="scroll-item">Contact</div>
-    </div>
-
-    <section id="home" class="hero">
-        <h1>Hi, I’m Diwas 👋</h1>
-        <p>Student • Developer • Dreamer</p>
-        <a href="#projects" class="btn">See My Work</a>
+    <!-- Home -->
+    <section id="home" class="section home fade-in">
+        <h2>Hello, I'm <span>Diwas Neupane</span></h2>
+        <p>Computer Science Student & Aspiring Android OS Developer</p>
+        <a href="#projects" class="btn">View My Work</a>
     </section>
 
-    <section id="about">
+    <!-- About -->
+    <section id="about" class="section about fade-in">
         <h2>About Me</h2>
         <p>
-            I’m a student passionate about coding, design, and creating beautiful, functional web experiences.
+            I’m passionate about Android OS development, coding, and exploring new tech. 
+            I also enjoy cooking, reading, and traveling.
         </p>
     </section>
 
-    <section id="projects">
+    <!-- Projects Carousel -->
+    <section id="projects" class="section projects fade-in">
         <h2>Projects</h2>
-        <div class="project-list">
-            <div class="project-card">
-                <h3>Project One</h3>
-                <p>A description of your first project goes here.</p>
+        <div class="carousel">
+            <div class="carousel-track">
+                <div class="project-card">
+                    <h3>Portfolio Website</h3>
+                    <p>HTML, CSS, JavaScript – The site you’re on now!</p>
+                </div>
+                <div class="project-card">
+                    <h3>Android App</h3>
+                    <p>A productivity app for students.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Physics Simulation</h3>
+                    <p>A simple projectile motion simulation in JS.</p>
+                </div>
             </div>
-            <div class="project-card">
-                <h3>Project Two</h3>
-                <p>A description of your second project goes here.</p>
-            </div>
+            <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
         </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required />
-            <input type="email" placeholder="Your Email" required />
-            <textarea placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit" class="btn">Send Message</button>
-        </form>
+    <!-- Contact -->
+    <section id="contact" class="section contact fade-in">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:diwasneupane652@gmail.com">diwas@example.com</a></p>
+        <p>GitHub: <a href="#">github.com/techdiwas</a></p>
     </section>
 
     <footer>
-        <p>&copy; 2025 Diwas. All rights reserved.</p>
+        <p>© 2025 Diwas Neupane. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>

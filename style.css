@@ -1,208 +1,136 @@
-/* Reset and Base Styles */
+/* ===== General ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
-
 body {
-    font-family: 'Poppins', sans-serif;
-    background: #f9f9f9;
-    color: #333;
+    font-family: 'Segoe UI', sans-serif;
     line-height: 1.6;
+    transition: background 0.3s, color 0.3s;
+}
+:root {
+    --bg: #111;
+    --text: #fff;
+    --accent: #0ff;
+}
+.light-mode {
+    --bg: #f5f5f5;
+    --text: #111;
+}
+body {
+    background: var(--bg);
+    color: var(--text);
 }
 
-/* Horizontally scrollable nav header */
-nav.scroll-header {
-    display: flex;
-    align-items: center;
-    background: #4facfe;
-    padding: 15px 0 15px 30px;
-    position: fixed;
-    width: 100%;
+/* ===== Navbar ===== */
+header {
+    background: rgba(0,0,0,0.8);
+    padding: 1rem;
+    position: sticky;
     top: 0;
     z-index: 100;
-    color: white;
+    backdrop-filter: blur(6px);
 }
-
-nav.scroll-header .logo {
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
     font-size: 1.5rem;
-    font-weight: bold;
-    margin-right: 16px;
-    flex-shrink: 0;
+    color: var(--accent);
 }
-
-nav.scroll-header .horizontal-scroll {
-    overflow-x: auto;
-    white-space: nowrap;
-    flex: 1 1 auto;
-    scrollbar-width: none;
-}
-
-nav.scroll-header .horizontal-scroll::-webkit-scrollbar {
-    display: none;
-}
-
-nav.scroll-header ul {
-    display: inline-flex;
+nav ul {
     list-style: none;
-    white-space: nowrap;
-    padding-right: 30px;
+    display: flex;
 }
-
-nav.scroll-header ul li {
-    margin-left: 20px;
+nav ul li {
+    margin-left: 1.5rem;
 }
-
-nav.scroll-header ul li a {
-    color: white;
+nav ul li a {
+    color: var(--text);
     text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
-    padding: 8px 16px;
-    border-radius: 999px;
-    display: inline-block;
-    font-size: 1rem;
 }
 
-nav.scroll-header ul li a.active,
-nav.scroll-header ul li a:hover {
-    color: #ffd700;
-    background: rgba(255,255,255,0.12);
+/* ===== Sections ===== */
+.section {
+    padding: 4rem 2rem;
+    text-align: center;
 }
-
-@media (max-width: 700px) {
-    nav.scroll-header .logo {
-        font-size: 1.2rem;
-        margin-right: 8px;
-    }
-    nav.scroll-header ul li {
-        margin-left: 10px;
-    }
-    nav.scroll-header ul li a {
-        font-size: 0.92rem;
-        padding: 7px 12px;
-    }
-}
-
-/* Hero Section */
-.hero {
+.home {
     height: 100vh;
-    background: linear-gradient(135deg, #4facfe, #00f2fe);
-    color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 20px;
 }
-
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
+span {
+    color: var(--accent);
 }
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
 .btn {
-    padding: 12px 25px;
-    background: white;
-    color: #4facfe;
-    border-radius: 50px;
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.7rem 1.5rem;
+    background: var(--accent);
+    color: #111;
     text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s;
+    border-radius: 5px;
 }
 
-.btn:hover {
-    background: #4facfe;
-    color: white;
+/* ===== Fade Animation ===== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-/* Sections */
-section {
-    padding: 100px 20px;
-    text-align: center;
-}
-
-#projects .project-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.project-card {
-    background: #fff;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
-}
-
-.project-card:hover {
-    transform: scale(1.05);
-}
-
-/* Contact Form */
-form {
-    max-width: 600px;
+/* ===== Carousel ===== */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    max-width: 700px;
     margin: auto;
+}
+.carousel-track {
     display: flex;
-    flex-direction: column;
+    transition: transform 0.4s ease-in-out;
 }
-
-form input, form textarea {
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+.project-card {
+    min-width: 100%;
+    background: rgba(255,255,255,0.05);
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 0 0.5rem;
 }
-
-form button {
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--accent);
     border: none;
+    padding: 0.5rem;
     cursor: pointer;
 }
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    color: #777;
+.prev {
+    left: 10px;
+}
+.next {
+    right: 10px;
 }
 
-/* Existing scrollable-top section */
-.scrollable-top {
-  overflow-x: auto;
-  white-space: nowrap;
-  padding: 10px;
-  background-color: #111;
-  border-bottom: 1px solid #333;
-  scrollbar-width: none; /* Firefox */
-}
-
-.scrollable-top::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
-}
-
-.scroll-item {
-  display: inline-block;
-  background-color: #222;
-  color: #fff;
-  padding: 8px 16px;
-  margin: 0 8px 0 0;
-  border-radius: 999px;
-  font-size: 14px;
-  font-weight: 600;
-  white-space: nowrap;
-  transition: background 0.3s;
-}
-
-.scroll-item:hover {
-  background-color: #444;
-  cursor: pointer;
+/* ===== Theme Toggle ===== */
+#theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--accent);
+    border: none;
+    padding: 0.7rem;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
 }
