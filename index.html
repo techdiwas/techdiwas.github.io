@@ -3,31 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO: A meta description improves search engine visibility. -->
+  <meta name="description" content="The personal portfolio and homepage for Your Name, showcasing projects, blog posts, and contact information.">
+  
   <title>Home - My Personal Website</title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+
   <header>
-    <div class="logo">🚀 MySite</div>
+    <!-- The site logo should be a link to the homepage. -->
+    <a href="index.html" class="logo">🚀 MySite</a>
+    
     <nav>
       <a href="index.html" class="active">Home</a>
       <a href="projects.html">Projects</a>
       <a href="blog.html">Blog</a>
       <a href="contact.html">Contact</a>
     </nav>
-    <div class="theme-toggle">🌙</div>
+    
+    <!-- Interactive elements like a theme toggle should be <button>s for accessibility. -->
+    <button type="button" class="theme-toggle" aria-label="Toggle dark and light theme">🌙</button>
   </header>
 
-  <section class="hero">
-    <img src="assets/img/profile.jpg" alt="Profile">
-    <h1>Hello, I'm Your Name</h1>
-    <p>Welcome to my personal space on the internet. I love building and creating.</p>
-  </section>
+  <!-- The <main> element wraps the dominant content of the page. -->
+  <main>
+    <!-- A <section> with a class 'hero' is a common pattern for a page's main banner. -->
+    <section class="hero">
+      <!-- The alt attribute should be descriptive for accessibility. -->
+      <img src="assets/img/profile.jpg" alt="A portrait of Your Name">
+      <h1>Hello, I'm Your Name</h1>
+      <p>Welcome to my personal space on the internet. I love building and creating.</p>
+    </section>
+  </main>
 
   <footer>
     <p>© 2025 Your Name. All Rights Reserved.</p>
   </footer>
 
+  <!-- Scripts are placed at the end of the body to prevent render-blocking. -->
   <script src="assets/js/script.js"></script>
+
 </body>
 </html>

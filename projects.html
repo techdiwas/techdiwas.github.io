@@ -3,34 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO: A meta description improves search engine visibility. -->
+  <meta name="description" content="A list of projects developed by Your Name, showcasing skills in web development and more.">
+  
   <title>Projects - My Personal Website</title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+
   <header>
-    <div class="logo">🚀 MySite</div>
+    <!-- The site logo should be a link to the homepage. -->
+    <a href="index.html" class="logo">🚀 MySite</a>
+    
     <nav>
       <a href="index.html">Home</a>
       <a href="projects.html" class="active">Projects</a>
       <a href="blog.html">Blog</a>
       <a href="contact.html">Contact</a>
     </nav>
-    <div class="theme-toggle">🌙</div>
+    
+    <!-- Interactive elements like a theme toggle should be <button>s for accessibility. -->
+    <button type="button" class="theme-toggle" aria-label="Toggle dark and light theme">🌙</button>
   </header>
 
-  <section>
-    <h2>My Projects</h2>
-    <div class="projects">
-      <div class="card"><h3>Project One</h3><p>HTML, CSS, JS build.</p></div>
-      <div class="card"><h3>Project Two</h3><p>Something cool.</p></div>
-      <div class="card"><h3>Project Three</h3><p>Advanced features.</p></div>
-    </div>
-  </section>
+  <!-- The <main> element wraps the dominant content of the page. -->
+  <main>
+    <section>
+      <h2>My Projects</h2>
+      <div class="projects">
+        
+        <!-- 
+          UX & Semantics: Each project card is now a clickable link (<a>).
+          This is more intuitive for users and semantically correct, as each card
+          represents a link to another resource (the project details).
+          The 'href' should point to the actual project URL or a details page.
+        -->
+        <a href="#" class="card">
+          <h3>Project One</h3>
+          <p>HTML, CSS, JS build.</p>
+        </a>
+        
+        <a href="#" class="card">
+          <h3>Project Two</h3>
+          <p>Something cool.</p>
+        </a>
+        
+        <a href="#" class="card">
+          <h3>Project Three</h3>
+          <p>Advanced features.</p>
+        </a>
+        
+      </div>
+    </section>
+  </main>
 
   <footer>
     <p>© 2025 Your Name. All Rights Reserved.</p>
   </footer>
 
   <script src="assets/js/script.js"></script>
+
 </body>
 </html>
