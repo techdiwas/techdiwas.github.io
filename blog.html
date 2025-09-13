@@ -3,25 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home - My Personal Website</title>
+  <title>Blog - My Personal Website</title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
   <header>
     <div class="logo">🚀 MySite</div>
     <nav>
-      <a href="index.html" class="active">Home</a>
+      <a href="index.html">Home</a>
       <a href="projects.html">Projects</a>
-      <a href="blog.html">Blog</a>
+      <a href="blog.html" class="active">Blog</a>
       <a href="contact.html">Contact</a>
     </nav>
     <div class="theme-toggle">🌙</div>
   </header>
 
-  <section class="hero">
-    <img src="assets/img/profile.jpg" alt="Profile">
-    <h1>Hello, I'm Your Name</h1>
-    <p>Welcome to my personal space on the internet. I love building and creating.</p>
+  <section>
+    <h2>My Blog</h2>
+    <div id="blog-list" class="blog-list"></div>
   </section>
 
   <footer>
@@ -29,5 +28,6 @@
   </footer>
 
   <script src="assets/js/script.js"></script>
+  <script src="assets/js/blog.js"></script>
 </body>
 </html>

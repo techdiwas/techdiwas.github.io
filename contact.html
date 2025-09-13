@@ -3,25 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home - My Personal Website</title>
+  <title>Contact - My Personal Website</title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
   <header>
     <div class="logo">🚀 MySite</div>
     <nav>
-      <a href="index.html" class="active">Home</a>
+      <a href="index.html">Home</a>
       <a href="projects.html">Projects</a>
       <a href="blog.html">Blog</a>
-      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="active">Contact</a>
     </nav>
     <div class="theme-toggle">🌙</div>
   </header>
 
-  <section class="hero">
-    <img src="assets/img/profile.jpg" alt="Profile">
-    <h1>Hello, I'm Your Name</h1>
-    <p>Welcome to my personal space on the internet. I love building and creating.</p>
+  <section>
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
   </section>
 
   <footer>
