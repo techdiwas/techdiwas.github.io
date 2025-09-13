@@ -1,79 +1,307 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Diwas | Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-    <!-- Horizontally scrollable nav -->
-    <nav class="scroll-header">
-        <div class="logo">Diwas</div>
-        <div class="horizontal-scroll">
-            <ul>
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <!-- Add more items to demonstrate scrolling -->
-                <li><a href="#test1">Test1</a></li>
-                <li><a href="#test2">Test2</a></li>
-                <li><a href="#test3">Test3</a></li>
-                <li><a href="#test4">Test4</a></li>
-            </ul>
-        </div>
-    </nav>
+<html lang="en" data-theme="auto">
+  <head>
+    <meta charset="utf-t" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>techdiwas — Portfolio</title>
+    <meta name="description" content="Personal portfolio of techdiwas. Showcasing projects, skills, and experience." />
+    <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <!-- Open Graph -->
+    <meta property="og:title" content="techdiwas — Portfolio" />
+    <meta property="og:description" content="Showcasing projects, skills, and experience." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://your-domain.example/" />
+    <meta property="og:image" content="https://your-domain.example/og-image.png" />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- Scrollable Tech Tags Section (unchanged) -->
-    <div class="scrollable-top">
-      <div class="scroll-item">Home</div>
-      <div class="scroll-item">About</div>
-      <div class="scroll-item">Projects</div>
-      <div class="scroll-item">Contact</div>
-    </div>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#">
+          <span class="brand-mark" aria-hidden="true">▣</span>
+          <span class="brand-text">techdiwas</span>
+        </a>
 
-    <section id="home" class="hero">
-        <h1>Hi, I’m Diwas 👋</h1>
-        <p>Student • Developer • Dreamer</p>
-        <a href="#projects" class="btn">See My Work</a>
-    </section>
+        <nav class="nav">
+          <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation">
+            <span class="bar" aria-hidden="true"></span>
+            <span class="bar" aria-hidden="true"></span>
+            <span class="bar" aria-hidden="true"></span>
+          </button>
+          <ul id="navMenu" class="nav-menu">
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact" class="btn btn-small">Contact</a></li>
+          </ul>
+        </nav>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            I’m a student passionate about coding, design, and creating beautiful, functional web experiences.
-        </p>
-    </section>
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle color theme" title="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.76 4.84l-1.8-1.79L3.17 4.84l1.79 1.79 1.8-1.79zm10.48 14.32l1.79 1.79 1.79-1.79-1.79-1.8-1.79 1.8zM12 4V1h0v3zm0 19v-3h0v3zM4 12H1v0h3zm22 0h-3v0h3zM6.76 19.16l-1.8 1.79-1.79-1.79 1.79-1.8 1.8 1.8zM19.16 4.84l1.79-1.79 1.79 1.79-1.79 1.79-1.79-1.79zM12 7a5 5 0 100 10A5 5 0 0012 7z"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+        </button>
+      </div>
+    </header>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-list">
-            <div class="project-card">
-                <h3>Project One</h3>
-                <p>A description of your first project goes here.</p>
+    <main id="main">
+      <section id="hero" class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">Hello, I’m</p>
+            <h1>Diwas <span class="accent">@techdiwas</span></h1>
+            <p class="tagline">
+              I build reliable web experiences and work on Android kernel tooling. Passionate about performance, developer UX, and clean architecture.
+            </p>
+            <div class="hero-actions">
+              <a class="btn" href="#projects">View Projects</a>
+              <a class="btn btn-secondary" href="#contact">Get in touch</a>
+              <a class="btn btn-ghost" href="https://github.com/techdiwas" target="_blank" rel="noopener">GitHub</a>
             </div>
-            <div class="project-card">
-                <h3>Project Two</h3>
-                <p>A description of your second project goes here.</p>
-            </div>
+          </div>
+          <div class="hero-media">
+            <!-- Replace with your photo -->
+            <div class="avatar" role="img" aria-label="Portrait of Diwas">TD</div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required />
-            <input type="email" placeholder="Your Email" required />
-            <textarea placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit" class="btn">Send Message</button>
-        </form>
-    </section>
+      <section id="projects" class="section">
+        <div class="container">
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">A selection of work and open-source contributions.</p>
 
-    <footer>
-        <p>&copy; 2025 Diwas. All rights reserved.</p>
+          <div class="grid projects-grid">
+            <!-- Project Card 1 -->
+            <article class="card project">
+              <div class="card-body">
+                <h3 class="card-title">Kernel Rebase Actions</h3>
+                <p class="card-text">
+                  GitHub Actions to automate Android kernel rebase workflows with safety checks and reporting.
+                </p>
+                <ul class="tags">
+                  <li>GitHub Actions</li><li>CI/CD</li><li>Bash</li>
+                </ul>
+              </div>
+              <div class="card-footer">
+                <a class="btn btn-small" href="https://github.com/techdiwas/kernel-rebase-actions" target="_blank" rel="noopener">Repository</a>
+              </div>
+            </article>
+
+            <!-- Project Card 2 -->
+            <article class="card project">
+              <div class="card-body">
+                <h3 class="card-title">Online Learning</h3>
+                <p class="card-text">
+                  A web learning playground with interactive lessons and demos.
+                </p>
+                <ul class="tags">
+                  <li>JavaScript</li><li>Frontend</li><li>Education</li>
+                </ul>
+              </div>
+              <div class="card-footer">
+                <a class="btn btn-small" href="https://github.com/techdiwas/online-learning" target="_blank" rel="noopener">Repository</a>
+              </div>
+            </article>
+
+            <!-- Project Card 3 -->
+            <article class="card project">
+              <div class="card-body">
+                <h3 class="card-title">Redmi MT6765 Kernel</h3>
+                <p class="card-text">
+                  Device kernel development for MT6765-based Redmi devices, including patches and build configs.
+                </p>
+                <ul class="tags">
+                  <li>Android</li><li>Kernel</li><li>MTK</li>
+                </ul>
+              </div>
+              <div class="card-footer">
+                <a class="btn btn-small" href="https://github.com/redmi-mt6765-dev/kernel" target="_blank" rel="noopener">Repository</a>
+              </div>
+            </article>
+
+            <!-- Project Card 4 -->
+            <article class="card project">
+              <div class="card-body">
+                <h3 class="card-title">Dandelion Dump</h3>
+                <p class="card-text">
+                  Firmware and vendor dumps for Redmi Dandelion to support development and porting.
+                </p>
+                <ul class="tags">
+                  <li>Android</li><li>Reverse Engineering</li><li>Docs</li>
+                </ul>
+              </div>
+              <div class="card-footer">
+                <a class="btn btn-small" href="https://github.com/redmi-mt6765-dev/redmi_dandelion_dump" target="_blank" rel="noopener">Repository</a>
+              </div>
+            </article>
+
+            <!-- Project Card 5 -->
+            <article class="card project">
+              <div class="card-body">
+                <h3 class="card-title">Dumpyara</h3>
+                <p class="card-text">
+                  Dumpyara utilities for extracting and organizing Android firmware dumps.
+                </p>
+                <ul class="tags">
+                  <li>Python</li><li>Tooling</li><li>Android</li>
+                </ul>
+              </div>
+              <div class="card-footer">
+                <a class="btn btn-small" href="https://github.com/AndroidDumps/dumpyara" target="_blank" rel="noopener">Repository</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section alt">
+        <div class="container">
+          <h2 class="section-title">Skills</h2>
+          <ul class="skills-list">
+            <li>HTML</li><li>CSS</li><li>JavaScript</li><li>TypeScript</li>
+            <li>React</li><li>Node.js</li><li>GitHub Actions</li><li>CI/CD</li>
+            <li>Android Kernel</li><li>Bash</li><li>Linux</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container about-grid">
+          <div>
+            <h2 class="section-title">About</h2>
+            <p>
+              I’m a developer focused on building robust web products and tooling that scales. I care about DX, performance, and shipping thoughtful features.
+              When I’m not coding, I tinker with Android kernels and CI automation.
+            </p>
+            <p>
+              I enjoy collaborating in open-source and learning in public.
+            </p>
+            <div class="stat-row">
+              <div class="stat">
+                <div class="stat-value">5+</div>
+                <div class="stat-label">Years coding</div>
+              </div>
+              <div class="stat">
+                <div class="stat-value">20+</div>
+                <div class="stat-label">Projects</div>
+              </div>
+              <div class="stat">
+                <div class="stat-value">OSS</div>
+                <div class="stat-label">Contributor</div>
+              </div>
+            </div>
+          </div>
+          <div class="about-card card">
+            <div class="card-body">
+              <h3 class="card-title">What I’m exploring</h3>
+              <ul class="checklist">
+                <li>Better DX for kernel automation</li>
+                <li>Accessible, fast frontends</li>
+                <li>Modern CI/CD patterns</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="section alt">
+        <div class="container">
+          <h2 class="section-title">Experience</h2>
+          <div class="timeline">
+            <article class="timeline-item">
+              <div class="time">2023 — Present</div>
+              <div class="content">
+                <h3>Independent Developer</h3>
+                <p>Building web apps, CI workflows, and open-source tooling.</p>
+                <ul class="bullets">
+                  <li>Designed and shipped automation for kernel rebases.</li>
+                  <li>Improved build reliability and developer onboarding.</li>
+                </ul>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <div class="time">2021 — 2023</div>
+              <div class="content">
+                <h3>Freelance Web Developer</h3>
+                <p>Delivered responsive, accessible sites and dashboards.</p>
+                <ul class="bullets">
+                  <li>Optimized performance and SEO.</li>
+                  <li>Integrated CI pipelines and testing.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container">
+          <h2 class="section-title">Contact</h2>
+          <p class="section-subtitle">Have a project or want to say hi? Send a message.</p>
+
+          <!-- Replace the action with your endpoint (e.g., Formspree) -->
+          <form id="contactForm" class="contact-form" action="https://formspree.io/f/your-id" method="POST" novalidate>
+            <div class="grid form-grid">
+              <label class="form-field">
+                <span>Name</span>
+                <input type="text" name="name" placeholder="Your name" required />
+                <small class="error" aria-live="polite"></small>
+              </label>
+
+              <label class="form-field">
+                <span>Email</span>
+                <input type="email" name="email" placeholder="you@example.com" required />
+                <small class="error" aria-live="polite"></small>
+              </label>
+
+              <label class="form-field form-full">
+                <span>Message</span>
+                <textarea name="message" rows="6" placeholder="Tell me about your project..." required></textarea>
+                <small class="error" aria-live="polite"></small>
+              </label>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn" type="submit">Send Message</button>
+              <a class="btn btn-ghost" href="mailto:hello@your-domain.example">Email instead</a>
+            </div>
+
+            <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand brand-footer" href="#">
+            <span class="brand-mark" aria-hidden="true">▣</span>
+            <span class="brand-text">techdiwas</span>
+          </a>
+          <p class="foot-note">© <span id="year"></span> All rights reserved.</p>
+        </div>
+        <div class="socials">
+          <a class="social" href="https://github.com/techdiwas" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a12 12 0 00-3.79 23.4c.6.11.82-.26.82-.58v-2.18c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.72.08-.72 1.2.08 1.83 1.23 1.83 1.23 1.07 1.83 2.8 1.3 3.49.99.11-.78.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.92 0-1.31.47-2.37 1.24-3.21-.12-.3-.54-1.52.12-3.16 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 016 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.64.24 2.86.12 3.16.77.84 1.24 1.9 1.24 3.21 0 4.6-2.8 5.61-5.47 5.91.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.83.58A12 12 0 0012 .5z"/></svg>
+          </a>
+          <a class="social" href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM3 8.98h4v12H3zM14.5 8.5c-2.36 0-3.5 1.3-3.5 1.3V9H7v12h4v-6.7c0-1.77.85-2.8 2.5-2.8 1.5 0 2.5 1.02 2.5 2.8V21h4v-6.7c0-3.6-1.92-5.8-5.5-5.8z"/></svg>
+          </a>
+          <a class="social" href="https://twitter.com/your-handle" target="_blank" rel="noopener" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 5.8a8.38 8.38 0 01-2.36.65 4.11 4.11 0 001.8-2.27 8.2 8.2 0 01-2.6 1 4.12 4.12 0 00-7.1 3.76A11.68 11.68 0 013 4.9a4.12 4.12 0 001.27 5.5 4.08 4.08 0 01-1.86-.51v.05a4.12 4.12 0 003.3 4 4.08 4.08 0 01-1.85.07 4.12 4.12 0 003.84 2.85A8.26 8.26 0 012 19.54a11.65 11.65 0 006.29 1.84c7.55 0 11.68-6.26 11.68-11.68 0-.18 0-.35-.01-.53A8.34 8.34 0 0022 5.8z"/></svg>
+          </a>
+        </div>
+      </div>
     </footer>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
