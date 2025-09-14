@@ -3,51 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- SEO: A meta description improves search engine visibility. -->
-  <meta name="description" content="A collection of articles and thoughts from My Personal Website.">
-  
   <title>Blog - My Personal Website</title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-
-  <!-- The <header> element contains introductory content and navigation links. -->
   <header>
-    <!-- The site logo should be a link to the homepage. -->
-    <a href="index.html" class="logo">🚀 MySite</a>
-    
-    <!-- The <nav> element is used for the main navigation block. -->
+    <div class="logo">🚀 MySite</div>
     <nav>
       <a href="index.html">Home</a>
       <a href="projects.html">Projects</a>
       <a href="blog.html" class="active">Blog</a>
       <a href="contact.html">Contact</a>
     </nav>
-    
-    <!-- Interactive elements like a theme toggle should be <button>s for accessibility. -->
-    <button type="button" class="theme-toggle" aria-label="Toggle dark and light theme">🌙</button>
+    <div class="theme-toggle">🌙</div>
   </header>
 
-  <!-- The <main> element wraps the dominant content of the page. -->
-  <main>
-    <!-- A <section> is a thematic grouping of content, typically with a heading. -->
-    <section>
-      <h2>My Blog</h2>
-      <!-- This container will be populated with blog posts by blog.js -->
-      <div id="blog-list" class="blog-list"></div>
-    </section>
-  </main>
+  <section>
+    <h2>My Blog</h2>
+    <div id="blog-list" class="blog-list"></div>
+  </section>
 
-  <!-- The <footer> contains authorship, copyright, and other closing information. -->
   <footer>
-    <!-- Consider using JavaScript to dynamically update the year. -->
     <p>© 2025 Your Name. All Rights Reserved.</p>
   </footer>
 
-  <!-- Scripts are placed at the end of the body to prevent render-blocking. -->
   <script src="assets/js/script.js"></script>
   <script src="assets/js/blog.js"></script>
-
 </body>
 </html>

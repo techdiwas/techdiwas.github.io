@@ -3,60 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- SEO: A meta description improves search engine visibility. -->
-  <meta name="description" content="This is my first blog post! I’ll share my journey, projects, and learnings.">
-  
   <title>First Post - My Blog</title>
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-
   <header>
-    <!-- The site logo should be a link to the homepage. -->
-    <a href="../index.html" class="logo">🚀 MySite</a>
-    
+    <div class="logo">🚀 MySite</div>
     <nav>
       <a href="../index.html">Home</a>
       <a href="../projects.html">Projects</a>
       <a href="../blog.html" class="active">Blog</a>
       <a href="../contact.html">Contact</a>
     </nav>
-    
-    <!-- Interactive elements like a theme toggle should be <button>s for accessibility. -->
-    <button type="button" class="theme-toggle" aria-label="Toggle dark and light theme">🌙</button>
+    <div class="theme-toggle">🌙</div>
   </header>
 
-  <!-- The <main> element wraps the dominant content of the page. -->
-  <main>
-    <!-- The <article> tag is the most semantic choice for a self-contained blog post. -->
-    <article>
-      <!-- It's good practice to wrap the post's title and metadata in its own header. -->
-      <header>
-        <h2>My First Post</h2>
-        <!-- 
-          Accessibility: Using the <time> tag with a 'datetime' attribute
-          provides a machine-readable date, which is better for SEO and assistive technologies.
-        -->
-        <p>Posted on <time datetime="2025-09-13">September 13, 2025</time></p>
-      </header>
-      
-      <p>This is my first blog post! I’ll share my journey, projects, and learnings.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      
-      <!-- A footer within the article can contain closing info like back links. -->
-      <footer>
-        <a href="../blog.html">← Back to Blog</a>
-      </footer>
-    </article>
-  </main>
+  <section>
+    <h2>My First Post</h2>
+    <p><em>Posted on September 13, 2025</em></p>
+    <p>This is my first blog post! I’ll share my journey, projects, and learnings.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <a href="../blog.html">← Back to Blog</a>
+  </section>
 
-  <!-- The page's main footer -->
   <footer>
     <p>© 2025 Your Name. All Rights Reserved.</p>
   </footer>
 
   <script src="../assets/js/script.js"></script>
-
 </body>
 </html>
